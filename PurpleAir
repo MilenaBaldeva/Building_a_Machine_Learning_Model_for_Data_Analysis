@@ -1,0 +1,87 @@
+Extracting Data from the PurpleAir API
+
+# Install the necessary libraries: 
+pip install pandas requests
+
+import requests
+import pandas as pd
+
+# PurpleAir API details
+api_url = "https://api.purpleair.com/v1/sensors"
+api_key = "YOUR_PURPLEAIR_API_KEY"  # Actual PurpleAir API key
+
+headers = {
+    "X-API-Key": api_key
+}
+
+# Define the fields you want to extract
+fields = "pm2.5_atm,temperature,humidity,sensor_index,latitude,longitude"
+
+# Add fields as query parameters
+params = {
+    "fields": fields
+}
+
+# Make the API request
+response = requests.get(api_url, headers=headers, params=params)
+
+if response.status_code == 200:
+    print("API Request Successful!")
+    data = response.json()
+
+    # Extract columns and data from the API response
+    columns = data.get("fields", [])
+    sensor_data = data.get("data", [])
+
+    # Create a DataFrame
+    df = pd.DataFrame(sensor_data, columns=columns)
+
+    # Save the DataFrame to a CSV file
+    file_path = "purpleair_sensor_locations.csv"
+    df.to_csv(file_path, index=False)
+    print(f"Data saved to {file_path}")
+else:
+    print(f"API Request Failed with status code {response.status_code}: {response.text}")
+
+# Enriching Data with City and Country
+import pandas as pd
+import requests
+
+# Google Maps API function
+def get_city_country(lat, lon):
+    api_key = "YOUR_GOOGLE_MAPS_API_KEY"  # Actual Google Maps API key
+    base_url = f"https://maps.googleapis.com/maps/api/geocode/json?latlng={lat},{lon}&key={api_key}"
+    response = requests.get(base_url)
+    if response.status_code == 200:
+        data = response.json()
+        if data['results']:
+            address_components = data['results'][0]['address_components']
+            city, country = None, None
+            for component in address_components:
+                if "locality" in component['types']:
+                    city = component['long_name']
+                elif "country" in component['types']:
+                    country = component['long_name']
+            return city, country
+    return None, None
+
+# Load the PurpleAir data
+file_path = "purpleair_sensor_locations.csv"  # Path to the previously saved CSV
+df = pd.read_csv(file_path)
+
+# Initialize new columns for city and country
+df['city'] = None
+df['country'] = None
+
+# Populate city and country columns
+for index, row in df.iterrows():
+    lat, lon = row['latitude'], row['longitude']
+    city, country = get_city_country(lat, lon)
+    df.at[index, 'city'] = city
+    df.at[index, 'country'] = country
+
+# Save the updated DataFrame to a new CSV file
+output_file_path = "sensor_locations_with_city_country.csv"
+df.to_csv(output_file_path, index=False)
+print(f"Updated file saved to {output_file_path}")
+
