@@ -1,6 +1,7 @@
 # Extracting Data from the PurpleAir API
 
 # Install the necessary libraries: 
+'''bash
 pip install pandas requests
 
 import requests
