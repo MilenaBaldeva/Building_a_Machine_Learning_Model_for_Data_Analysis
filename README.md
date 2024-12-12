@@ -5,8 +5,11 @@ This repository contains a Jupyter Notebook demonstrating the process of buildin
 **Key Features:**
 
 • Data exploration and cleaning
+
 • Feature engineering
+
 • Model selection and training
+
 • Evaluation using various metrics
 
 **Technologies Used:**
