@@ -1,4 +1,4 @@
-<h1 align="center">Building a Machine Learning Model for Data Analysis</h1>
+<h1 align="center">Car Price Prediction: EDA and Machine Learning</h1>
 
 This project performs exploratory data analysis (EDA), preprocessing, and predictive modeling on a dataset of used cars, with the aim of understanding key attributes and predicting car prices.
 
