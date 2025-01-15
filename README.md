@@ -1,5 +1,7 @@
 <h1 align="center">Building a Machine Learning Model for Data Analysis</h1>
 
+This project performs exploratory data analysis (EDA) and preprocessing on a dataset of used cars. The dataset provides a detailed overview of car attributes, making it suitable for tasks such as price prediction, market analysis, or customer segmentation.
+
 ### Table of Contents
 - [Dataset](#dataset)
 - [Key Attributes](#key-attributes)
@@ -7,8 +9,6 @@
 - [Tools and Libraries](#tools-and-libraries)
 - [Acknowledgments](#acknowledgments)
 - [Contact](#contact)
-
-This project performs exploratory data analysis (EDA) and preprocessing on a dataset of used cars. The dataset provides a detailed overview of car attributes, making it suitable for tasks such as price prediction, market analysis, or customer segmentation.
 
 ### Dataset
 
