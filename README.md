@@ -53,11 +53,23 @@ Generated summary statistics to understand the central tendency and variability 
 Conducted preliminary inspections to identify trends and anomalies in the data.
 Insights from unique value counts and distribution summaries.
 
+Here are some key visualizations from the EDA process:
+
+![image](https://github.com/user-attachments/assets/43120bb5-e0d3-427c-9df6-47c008045ae8)
+
+*Figure: Distribution of car prices in the dataset.*
+
+
+![image](https://github.com/user-attachments/assets/dfcc2ce6-8a45-48cc-94fd-3136fa4d4473)
+
+
+*Figure: Correlation heatmap of numerical attributes.*
+
 ### Tools and Libraries
 
 The following tools and libraries were used in this project:
 
-Python Libraries:
+- Python Libraries:
 
 NumPy, Pandas for data manipulation.
 
@@ -65,13 +77,12 @@ Matplotlib, Seaborn for visualization.
 
 Scikit-learn for preprocessing and potential modeling.
 
-External Tools: kagglehub for dataset retrieval.
+- External Tools: kagglehub for dataset retrieval.
 
 ### Acknowledgments
-
-Dataset by Rakkesh Arv.
-
-Special thanks to the open-source community for tools and libraries used.
+- Dataset by Rakkesh Arv on Kaggle.
+- Open-source contributors to Python libraries used in this project.
+- The Kaggle community for inspiration and resources.
 
 ### Contact
 If you have any questions or would like to contribute, feel free to reach out:
