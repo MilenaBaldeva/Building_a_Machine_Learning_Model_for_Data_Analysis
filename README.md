@@ -65,6 +65,17 @@ Here are some key visualizations from the EDA process:
 
 *Figure: Correlation heatmap of numerical attributes.*
 
+**6. Predictive Modeling**
+
+- Built machine learning models to predict car prices based on key features.
+- Model used: Linear Regression.
+- Evaluated model performance using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE) and R².
+- Visualized model predictions and compared them to actual values to assess model accuracy.
+
+  ![image](https://github.com/user-attachments/assets/80c7c88d-f919-4196-92d3-678c8d417453)
+  
+Figure: Scatter plot of predicted vs. actual car prices.
+
 ### Tools and Libraries
 
 The following tools and libraries were used in this project:
@@ -75,7 +86,7 @@ NumPy, Pandas for data manipulation.
 
 Matplotlib, Seaborn for visualization.
 
-Scikit-learn for preprocessing and potential modeling.
+Scikit-learn for preprocessing, model training, and evaluation.
 
 - External Tools: kagglehub for dataset retrieval.
 
