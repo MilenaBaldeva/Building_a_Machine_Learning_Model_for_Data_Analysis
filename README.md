@@ -70,6 +70,10 @@ Here are some key visualizations from the EDA process:
 - Built machine learning models to predict car prices based on key features.
 - Model used: Linear Regression.
 - Evaluated model performance using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE) and R².
+  - The Linear Regression model achieved the following evaluation metrics:
+    - **Mean Absolute Error (MAE):** 0.288 - suggests the model predicts values with an average error of ~29% of the scale (assuming the values were scaled).
+    - **Mean Squared Error (MSE):** 0.138 - suggests the model is reasonably accurate.
+    - **R²:** 0.867 - suggests the model captures the relationships in the data well. 
 - Visualized model predictions and compared them to actual values to assess model accuracy.
 
   ![image](https://github.com/user-attachments/assets/80c7c88d-f919-4196-92d3-678c8d417453)
